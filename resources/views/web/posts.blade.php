@@ -22,7 +22,8 @@
 
             @endforeach
 
-            {{ $posts->render() }}
+            {{ $posts->render('admin.partials.pagination') }}
+
         </div>
     </div>
 </div>
