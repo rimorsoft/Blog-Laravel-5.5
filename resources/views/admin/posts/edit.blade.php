@@ -1,23 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Editar entrada
-                </div>
 
-                <div class="panel-body">
-                    {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!}
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-md-center">
+
+        <div class="card col-sm-10 p-0">
+          <div class="card-header">
+            Editar entrada
+          </div>
+          <div class="card-body">
+            {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!}
                         
-                        @include('admin.posts.partials.form')
+                @include('admin.posts.partials.form')
 
-                    {!! Form::close() !!}
-                </div>
-            </div>
+            {!! Form::close() !!
+          </div>
         </div>
+
     </div>
 </div>
+
 @endsection
